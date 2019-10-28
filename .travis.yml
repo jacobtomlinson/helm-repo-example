@@ -13,7 +13,7 @@ before_install:
     -in deploy_key.enc -out deploy_key -d
   - chmod 400 deploy_key
 env:
-  - GIT_SSH_COMMAND="ssh -i deploy_key"
+  - GIT_SSH_COMMAND="ssh -i ${PWD}/deploy_key"
 deploy:
   - provider: script
     skip_cleanup: true
