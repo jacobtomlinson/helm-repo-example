@@ -1,0 +1,13 @@
+# .travis.yml
+sudo: required
+
+language: python
+python:
+  - "3.6"
+
+install:
+  - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
+  - helm init --client-only
+
+script:
+  - helm lint example
