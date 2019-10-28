@@ -1,0 +1,10 @@
+title: Our example Helm chart repo
+description: A chart repo for storing charts.
+theme: minima
+url: "https://helm-repo-example.jacobtomlinson.dev/"
+repo_name: helm-repo-example
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
