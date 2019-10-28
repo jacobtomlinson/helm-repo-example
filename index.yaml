@@ -3,6 +3,16 @@ entries:
   example:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2019-10-28T16:43:54.284821369Z"
+    description: A Helm chart for Kubernetes
+    digest: b2a2996eb6da0504181259ecdd43df60087c90a7da886752f9dc521499c28578
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/1280px-Kubernetes_logo_without_workmark.svg.png
+    name: example
+    urls:
+    - https://helm-repo-example.jacobtomlinson.dev/example-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2019-10-28T15:06:42.594571Z"
     description: A Helm chart for Kubernetes
     digest: 461ca95e98c9dcea13a064b7578d2fcb8b191b783fdc1ffe242376aa1146e0a6
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://helm-repo-example.jacobtomlinson.dev/example-0.1.0.tgz
     version: 0.1.0
-generated: "2019-10-28T15:06:42.593794Z"
+generated: "2019-10-28T16:43:54.284345654Z"
