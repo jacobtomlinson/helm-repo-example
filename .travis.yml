@@ -1,13 +1,22 @@
-# .travis.yml
 sudo: required
-
 language: python
 python:
   - "3.6"
-
 install:
   - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
   - helm init --client-only
-
+  - pip install chartpress
 script:
   - helm lint example
+before_install:
+  - openssl aes-256-cbc -K $encrypted_1b02f153377c_key -iv $encrypted_1b02f153377c_iv
+    -in deploy_key.enc -out deploy_key -d
+env:
+  - GIT_SSH_COMMAND="ssh -i deploy_key"
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: chartpress --publish-chart
+    on:
+      branch: master
+      tags: true
